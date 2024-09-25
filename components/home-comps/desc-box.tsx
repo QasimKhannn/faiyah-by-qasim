@@ -4,9 +4,6 @@ import { jellyTriangle } from 'ldrs'
 
 jellyTriangle.register()
 
-// Default values shown
-
-
 const DescBox: React.FC = () => {
     return (
         <div className='relative h-full w-full flex flex-col rounded-2xl col-span-2 p-5 overflow-hidden row-span-1'>

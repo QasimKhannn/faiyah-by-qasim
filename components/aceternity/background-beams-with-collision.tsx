@@ -3,13 +3,15 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useRef, useState, useEffect } from "react";
 
-export const BackgroundBeamsWithCollision = ({
-    children,
-    className,
-}: {
+interface props {
     children: React.ReactNode;
     className?: string;
-}) => {
+}
+
+const BackgroundBeamsWithCollision: React.FC<props> = ({
+    children,
+    className,
+}: props) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const parentRef = useRef<HTMLDivElement>(null);
 
@@ -113,7 +115,7 @@ const CollisionMechanism = React.forwardRef<
             repeatDelay?: number;
         };
     }
->(({ parentRef, containerRef, beamOptions = {} }, ref) => {
+>(({ parentRef, containerRef, beamOptions = {} }) => {
     const beamRef = useRef<HTMLDivElement>(null);
     const [collision, setCollision] = useState<{
         detected: boolean;
@@ -157,7 +159,7 @@ const CollisionMechanism = React.forwardRef<
         const animationInterval = setInterval(checkCollision, 50);
 
         return () => clearInterval(animationInterval);
-    }, [cycleCollisionDetected, containerRef]);
+    }, [cycleCollisionDetected, containerRef, parentRef]);
 
     useEffect(() => {
         if (collision.detected && collision.coordinates) {
@@ -256,3 +258,6 @@ const Explosion = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
         </div>
     );
 };
+
+
+export default BackgroundBeamsWithCollision

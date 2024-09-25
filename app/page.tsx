@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import LdrLoader from "@/components/ldr-loader";
-import HomePage from "./(main)/page";
+import dynamic from "next/dynamic";
+import HomePage from "./about/page"; // Ensure this path is correct
+
+const LdrLoader = dynamic(() => import("@/components/ldr-loader"), { ssr: false });
 
 const Home: React.FC = () => {
   const [loading, setLoading] = useState(true);

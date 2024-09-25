@@ -1,13 +1,14 @@
 "use client"
-
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { helix } from 'ldrs';
 import Link from 'next/link';
 
-helix.register();
-
 const Navbar: React.FC = () => {
     const [activeLink, setActiveLink] = useState<string>('about');
+
+    useEffect(() => {
+        helix.register();
+    }, []);
 
     const handleLinkClick = (link: string) => {
         setActiveLink(link);
