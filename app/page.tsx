@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import HomePage from "./about/page"; // Ensure this path is correct
+import AboutPage from "./about/page";
 
 const LdrLoader = dynamic(() => import("@/components/ldr-loader"), { ssr: false });
 
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
           <LdrLoader />
         </div>
       ) : (
-        <HomePage />
+        <AboutPage />
       )}
     </div>
   );

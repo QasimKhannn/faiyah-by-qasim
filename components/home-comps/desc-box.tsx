@@ -6,9 +6,9 @@ jellyTriangle.register()
 
 const DescBox: React.FC = () => {
     return (
-        <div className='relative h-full w-full flex flex-col rounded-2xl col-span-2 p-5 overflow-hidden row-span-1'>
+        <div className='relative h-full w-full flex flex-col rounded-2xl md:col-span-2 p-5 overflow-hidden row-span-1'>
             <div className='absolute inset-0 bg-white opacity-15 rounded-2xl' />
-            <div className='flex justify-start items-center relative z-10 pl-5 py-5'>
+            <div className='flex md:justify-start justify-center items-center relative z-10 pl-5 py-5'>
                 <l-jelly-triangle
                     size="30"
                     speed="1.75"
