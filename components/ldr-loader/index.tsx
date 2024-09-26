@@ -4,7 +4,6 @@ import { quantum } from 'ldrs'
 
 quantum.register()
 
-
 function LdrLoader() {
     return (
         <div className='relative transition-opacity duration-500 hover:opacity-50'>
