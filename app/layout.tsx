@@ -1,3 +1,4 @@
+import SplashScreen from "@/components/splash";
 import "./globals.css";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
@@ -24,13 +25,13 @@ interface Props {
 const RootLayout: React.FC<Props> = ({ children }: Readonly<Props>) => {
     return (
         <html lang="en">
-            <body className={`${poppins.className} font-normal`}>
-                <div className="absolute top-5 left-0 w-full z-10">
+            <body className={`${poppins.className} font-normal md:overflow-hidden md:flex md:flex-col w-full`}>
+                <SplashScreen>
                     <Navbar />
-                </div>
-                <BackgroundBeamsWithCollision>
-                    {children}
-                </BackgroundBeamsWithCollision>
+                    <BackgroundBeamsWithCollision>
+                        {children}
+                    </BackgroundBeamsWithCollision>
+                </SplashScreen>
             </body>
         </html>
     );

@@ -10,7 +10,7 @@ const SocialsBox = dynamic(() => import('@/components/home-comps/socials-box'), 
 
 const HomePage: React.FC = () => {
     return (
-        <div className="h-full w-full mx-auto grid grid-cols-1 lg:grid-cols-4 gap-3 px-10 md:pt-20 pt-28 pb-10">
+        <div className="h-full w-full mx-auto grid grid-cols-1 lg:grid-cols-4 gap-3 px-10 md:mt-0 mb-10 md:mb-0">
             <div className="col-span-1 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                 <IntroBox />
                 <ImageBox />

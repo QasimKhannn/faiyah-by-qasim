@@ -1,12 +1,12 @@
-import CardSpotlight from '@/components/aceternity/card-spotlight';
-import Image from 'next/image';
 import React from 'react';
-import theImage from "../../public/logo-spiral.png";
+import Image from 'next/image';
 import { Eye, Github } from 'lucide-react';
+import theImage from "../../public/logo-spiral.png";
+import CardSpotlight from '@/components/aceternity/card-spotlight';
 
 const ProjectsPage: React.FC = () => {
     return (
-        <div className="min-h-screen w-full grid grid-cols-1 lg:grid-cols-4 gap-6 px-10 md:pt-20 pt-28 pb-10">
+        <div className="min-h-screen w-full grid grid-cols-1 lg:grid-cols-4 gap-6 px-10 md:mt-0 mb-10 md:mb-0">
             {[1, 2, 3, 4].map((_, index) => (
                 <CardSpotlight key={index} className='p-4 max-h-96'>
                     <div className='bg-lime-50 rounded-md'>
