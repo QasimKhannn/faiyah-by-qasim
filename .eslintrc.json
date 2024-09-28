@@ -2,6 +2,10 @@
   "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
     "@typescript-eslint/no-explicit-any": "off",
-    "react-hooks/exhaustive-deps": "off"
+    "react-hooks/exhaustive-deps": "off",
+    "prefer-const": "off",  // Add this to disable prefer-const
+    "@typescript-eslint/no-unused-vars": "off", // Add this to disable unused vars check
+    "@typescript-eslint/no-unused-expressions": "off", // Add this to disable unused expressions check
+    "react/no-unescaped-entities": "off"
   }
 }

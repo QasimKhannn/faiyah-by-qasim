@@ -17,7 +17,7 @@ nav {
   overflow-x: hidden;
 }
 
-button {
+.nav-button {
   outline: none;
   border: none;
   -webkit-user-select: none;

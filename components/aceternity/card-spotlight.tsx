@@ -63,10 +63,11 @@ const CardSpotlight = ({
                         animationSpeed={5}
                         containerClassName="bg-transparent absolute inset-0 pointer-events-none"
                         colors={[
-                            [255, 165, 0],
-                            [255, 69, 0],
-                            [255, 0, 0],
+                            [191, 64, 191],  // Brighter Purple
+                            [111, 0, 255],   // Brighter Indigo
+                            [191, 64, 191],  // Brighter Purple (or adjust as needed)
                         ]}
+
                         dotSize={3}
                     />
                 )}

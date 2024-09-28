@@ -72,7 +72,7 @@ const BackgroundBeamsWithCollision: React.FC<props> = ({
         <div
             ref={parentRef}
             className={cn(
-                "min-h-[28rem] md:min-h-[33rem] bg-black relative flex items-center w-full justify-center overflow-hidden",
+                "min-h-[28rem] md:min-h-[33rem] bg-[#090c17] relative flex items-center w-full justify-center overflow-hidden",
                 // h-screen if you want bigger
                 className
             )}

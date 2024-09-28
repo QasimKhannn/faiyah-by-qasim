@@ -14,10 +14,8 @@ const ImageBox: React.FC<props> = ({ className }: props) => {
                 src={myImage}
                 alt="qasim-khan"
                 layout="responsive"
-                width={500}
-                height={300}
-                className="rounded-2xl object-cover"
-                priority
+                className="object-cover w-full h-full rounded-2xl"
+                priority={true}
             />
         </div>
     );

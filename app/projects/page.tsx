@@ -6,7 +6,7 @@ import CardSpotlight from '@/components/aceternity/card-spotlight';
 
 const ProjectsPage: React.FC = () => {
     return (
-        <div className="min-h-screen w-full grid grid-cols-1 lg:grid-cols-4 gap-6 px-10 md:mt-0 mb-10 md:mb-0">
+        <div className="md:h-[33rem] h-full w-full grid grid-cols-1 lg:grid-cols-4 gap-6 px-10 md:mt-0 mb-10 md:mb-0 py-3 bg-transparent">
             {[1, 2, 3, 4].map((_, index) => (
                 <CardSpotlight key={index} className='p-4 max-h-96'>
                     <div className='bg-lime-50 rounded-md'>
@@ -20,7 +20,7 @@ const ProjectsPage: React.FC = () => {
                     <p className='text-white text-xs'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, quis veniam aliquam, sed id fugiat ipsa odio</p>
                     <p className='text-white my-3'>Tools</p>
                     <div className='flex items-end justify-end gap-3 flex-row'>
-                        <div className='p-1 rounded-2xl bg-orange-700 flex justify-center items-center'>
+                        <div className='p-1 rounded-2xl bg-purple-500 flex justify-center items-center'>
                             <Eye size={20} color='white' />
                         </div>
                         <div className='p-1 rounded-2xl bg-white flex justify-center items-center'>

@@ -10,10 +10,9 @@
   },
   "dependencies": {
     "@react-three/fiber": "^8.17.8",
-    "@tabler/icons-react": "^3.17.0",
     "@types/three": "^0.168.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.8.0",
+    "framer-motion": "^11.9.0",
     "ldrs": "^1.0.2",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.445.0",
@@ -21,6 +20,7 @@
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.5",
+    "simplex-noise": "^4.0.3",
     "tailwind-merge": "^2.5.2",
     "three": "^0.168.0"
   },
