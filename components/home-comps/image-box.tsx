@@ -3,9 +3,13 @@ import Image from "next/image";
 import React from "react";
 import myImage from "../../public/my-image.jpg";
 
-const ImageBox: React.FC = () => {
+interface props {
+    className?: string
+}
+
+const ImageBox: React.FC<props> = ({ className }: props) => {
     return (
-        <div className="relative h-full w-full flex rounded-2xl md:col-span-1">
+        <div className={className}>
             <Image
                 src={myImage}
                 alt="qasim-khan"

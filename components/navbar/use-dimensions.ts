@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 // The magical hook to measure the dimensions
 export const useDimensions = (ref: any) => {

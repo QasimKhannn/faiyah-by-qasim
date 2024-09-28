@@ -25,7 +25,7 @@ interface Props {
 const RootLayout: React.FC<Props> = ({ children }: Readonly<Props>) => {
     return (
         <html lang="en">
-            <body className={`${poppins.className} font-normal md:overflow-hidden md:flex md:flex-col w-full`}>
+            <body className={`${poppins.className} bg-black font-normal`}>
                 <SplashScreen>
                     <Navbar />
                     <BackgroundBeamsWithCollision>

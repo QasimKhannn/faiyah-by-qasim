@@ -1,8 +1,7 @@
-"use client"; // Mark this as a client component
+"use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion"; // Import Framer Motion
-import LdrLoader from "@/components/ldr-loader"; // Import your loader
+import { motion } from "framer-motion";
 
 const SplashScreen: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [loading, setLoading] = useState(true);
@@ -10,22 +9,21 @@ const SplashScreen: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 2000); // Simulating splash screen duration
+        }, 3000);
 
         return () => clearTimeout(timer);
     }, []);
 
-    // Define Framer Motion path animation variants
     const icon = {
         hidden: {
             pathLength: 0,
-            fill: "rgba(255, 255, 255, 0)" // Invisible
+            fill: "rgba(255, 255, 255, 0)"
         },
         visible: {
             pathLength: 1,
-            fill: "rgba(255, 255, 255, 1)", // Visible with white fill
+            fill: "rgba(255, 255, 255, 1)",
             transition: {
-                duration: 2, // Match this with the splash screen duration
+                duration: 2,
                 ease: "easeInOut"
             }
         }
@@ -34,12 +32,11 @@ const SplashScreen: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     return (
         <>
             {loading ? (
-                <div className="absolute inset-0 flex justify-center items-center z-50 bg-black">
-                    {/* SVG with Framer Motion path animation */}
+                <div className="absolute inset-0 flex justify-center items-center bg-black">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 100 100"
-                        className="h-24 w-24" // Adjust size as needed
+                        className="h-24 w-24"
                     >
                         <motion.path
                             d="M0 100V0l50 50 50-50v100L75 75l-25 25-25-25z"
@@ -50,7 +47,7 @@ const SplashScreen: React.FC<{ children: React.ReactNode }> = ({ children }) => 
                     </svg>
                 </div>
             ) : (
-                children // Render children once splash is done
+                children
             )}
         </>
     );
