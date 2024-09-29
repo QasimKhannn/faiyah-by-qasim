@@ -1,10 +1,12 @@
 "use client";
-import AboutPage from "./about/page";
+import dynamic from "next/dynamic";
+const HomePage = dynamic(() => import("./about/page"), { ssr: false });
+
 
 const Home: React.FC = () => {
 
   return (
-    <AboutPage />
+    <HomePage />
   );
 };
 

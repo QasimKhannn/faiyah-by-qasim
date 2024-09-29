@@ -6,7 +6,6 @@ interface props {
     className?: string
 }
 
-
 jellyTriangle.register()
 
 const DescBox: React.FC<props> = ({ className }: props) => {

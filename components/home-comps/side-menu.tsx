@@ -1,7 +1,10 @@
 "use client"
 import React from 'react'
-import { ImagesSlider } from '../aceternity/image-slider'
+import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
+
+const ImagesSlider = dynamic(() => import("@/components/aceternity/image-slider"), { ssr: false });
+
 
 interface props {
     className?: string

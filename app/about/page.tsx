@@ -2,7 +2,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import { Cover } from "@/components/aceternity/cover/cover";
 import { imageBoxVariants, introBoxVariants, sideMenuVariants, socialsBoxVariants, zoomOutVariants } from "@/lib/framer";
 
 const ContactBox = dynamic(() => import("@/components/home-comps/contact-box"), { ssr: false });
@@ -11,6 +10,7 @@ const ImageBox = dynamic(() => import("@/components/home-comps/image-box"), { ss
 const IntroBox = dynamic(() => import("@/components/home-comps/intro-box"), { ssr: false });
 const SideMenu = dynamic(() => import("@/components/home-comps/side-menu"), { ssr: false });
 const SocialsBox = dynamic(() => import("@/components/home-comps/socials-box"), { ssr: false });
+const Cover = dynamic(() => import("@/components/aceternity/cover/cover"), { ssr: false });
 
 const HomePage: React.FC = () => {
     return (
@@ -20,7 +20,6 @@ const HomePage: React.FC = () => {
             initial="hidden"
             animate="visible"
         >
-            {/* Main content section */}
             <motion.div className="col-span-1 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 h-full" variants={zoomOutVariants}>
                 <motion.div
                     variants={introBoxVariants}
@@ -52,7 +51,6 @@ const HomePage: React.FC = () => {
                 </motion.div>
             </motion.div>
 
-            {/* Sidebar section */}
             <motion.div className="col-span-1 grid flex-col gap-4 h-full" variants={zoomOutVariants}>
                 <motion.div
                     variants={sideMenuVariants}

@@ -1,11 +1,14 @@
 "use client"
-import { Input, TextArea } from '@/components/aceternity/form/input'
-import { Label } from '@/components/aceternity/form/label'
-import { motion } from 'framer-motion'
-import { cn } from '@/lib/utils'
 import React from 'react'
 import Image from 'next/image'
+import { cn } from '@/lib/utils'
+import dynamic from 'next/dynamic'
+import { motion } from 'framer-motion'
 import { zoomOutVariants } from '@/lib/framer'
+
+const Input = dynamic(() => import("@/components/aceternity/form/input"), { ssr: false });
+const TextArea = dynamic(() => import("@/components/aceternity/form/text-area"), { ssr: false });
+const Label = dynamic(() => import("@/components/aceternity/form/label"), { ssr: false });
 
 const ContactUs: React.FC = () => {
     const handleSubmit = () => {

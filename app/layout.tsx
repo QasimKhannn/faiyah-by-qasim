@@ -1,7 +1,6 @@
-import SplashScreen from "@/components/splash";
 import "./globals.css";
-import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import type { Metadata } from "next";
 
 const Navbar = dynamic(() => import("@/components/navbar"), { ssr: false });
 const BackgroundBeamsWithCollision = dynamic(() => import("@/components/aceternity/background-beams-with-collision"), { ssr: false });
@@ -14,8 +13,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-    title: "Faiyah 🔥",
-    description: "We need some faiyah in our life 🔥",
+    title: "Qasim Khan",
+    description: "Full Stack Software Engineer </>",
 };
 
 interface Props {
@@ -26,12 +25,10 @@ const RootLayout: React.FC<Props> = ({ children }: Readonly<Props>) => {
     return (
         <html lang="en">
             <body className={`${poppins.className} bg-black font-normal`}>
-                <SplashScreen>
-                    <Navbar />
-                    <BackgroundBeamsWithCollision>
-                        {children}
-                    </BackgroundBeamsWithCollision>
-                </SplashScreen>
+                <Navbar />
+                <BackgroundBeamsWithCollision>
+                    {children}
+                </BackgroundBeamsWithCollision>
             </body>
         </html>
     );

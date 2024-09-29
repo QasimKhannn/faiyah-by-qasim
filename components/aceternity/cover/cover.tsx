@@ -5,13 +5,15 @@ import { useRef } from "react";
 import { cn } from "@/lib/utils";
 import { SparklesCore } from "./sparkles";
 
-export const Cover = ({
+interface props {
+    className?: string;
+    children: React.ReactNode
+}
+
+const Cover: React.FC<props> = ({
     children,
     className,
-}: {
-    children?: React.ReactNode;
-    className?: string;
-}) => {
+}: props) => {
     const [hovered, setHovered] = useState(false);
 
     const ref = useRef<HTMLDivElement>(null);
@@ -145,7 +147,7 @@ export const Cover = ({
     );
 };
 
-export const Beam = ({
+const Beam = ({
     className,
     delay,
     duration,
@@ -210,7 +212,7 @@ export const Beam = ({
     );
 };
 
-export const CircleIcon = ({
+const CircleIcon = ({
     className,
     delay,
 }: {
@@ -226,3 +228,5 @@ export const CircleIcon = ({
         ></div>
     );
 };
+
+export default Cover

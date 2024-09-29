@@ -1,9 +1,19 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-export const ImagesSlider = ({
+interface props {
+    images: string[]
+    children: React.ReactNode
+    overlay?: React.ReactNode
+    overlayClassName?: string
+    className?: string
+    autoplay?: boolean
+    direction?: "up" | "down"
+}
+
+const ImagesSlider: React.FC<props> = ({
     images,
     children,
     overlay = true,
@@ -11,15 +21,7 @@ export const ImagesSlider = ({
     className,
     autoplay = true,
     direction = "up",
-}: {
-    images: string[];
-    children: React.ReactNode;
-    overlay?: React.ReactNode;
-    overlayClassName?: string;
-    className?: string;
-    autoplay?: boolean;
-    direction?: "up" | "down";
-}) => {
+}: props) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [loading, setLoading] = useState(false);
     const [loadedImages, setLoadedImages] = useState<string[]>([]);
@@ -150,3 +152,5 @@ export const ImagesSlider = ({
         </div>
     );
 };
+
+export default ImagesSlider
