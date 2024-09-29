@@ -13,8 +13,7 @@ const ContactBox: React.FC<props> = ({ className }: props) => {
             <div className='absolute inset-0 bg-white opacity-80 rounded-2xl' />
             <div className='flex justify-between items-center relative z-50'>
                 <p className='text-xs md:text-sm font-bold text-black'>Have a question or need a service?</p>
-                <Link href='https://mail.google.com/mail/?view=cm&fs=1&to=iamqasimk@gmail.com'
-                    target='_blank'>
+                <Link href='/contact'>
                     <ArrowUpRight size={40} className='text-black' />
                 </Link>
             </div>

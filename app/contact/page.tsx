@@ -56,15 +56,19 @@ const ContactUs: React.FC = () => {
                     </button>
                 </form>
             </div>
-            <div className="relative w-full md:h-[31rem] mx-auto rounded-none md:rounded-2xl shadow-input bg-black md:col-span-1 col-span-2 overflow-hidden">
+            <div className="relative w-full md:h-[31rem] object-cover mx-auto rounded-none md:rounded-2xl shadow-input bg-black md:col-span-1 col-span-2 overflow-hidden">
                 <Image
                     src="https://img.freepik.com/free-photo/view-astronaut-spacesuit-snowboarding-moon_23-2151294776.jpg?t=st=1727597361~exp=1727600961~hmac=887fc045d0e0f073c434e9ea909ed8613e90a9d9f24a119e3a952a99e1e33cec&w=1060"
                     alt="qasim-khan"
                     fill
-                    className="object-cover w-full h-full rounded-2xl"
-                    priority={true}
+                    className="object-cover rounded-2xl"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 
+               (max-width: 1024px) 50vw, 
+               33vw"
                 />
             </div>
+
 
         </motion.div>
     )

@@ -10,14 +10,15 @@ interface props {
 
 const ImageBox: React.FC<props> = ({ className }: props) => {
     return (
-        <div className={`${className} relative w-full h-64 sm:h-80 md:h-full`}>
+        <div className={`${className} relative w-full h-80 md:h-full`}>
             <AnimatedBorder>
                 <Image
                     src={myImage}
-                    alt="qasim-khan"
+                    alt="A description of the image for accessibility"
                     fill
-                    className="object-cover w-full h-full rounded-2xl z-20 p-[0.14rem]"
-                    priority={true}
+                    className="object-cover rounded-2xl z-20 p-[0.14rem]"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 />
             </AnimatedBorder>
         </div>

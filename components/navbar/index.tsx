@@ -1,5 +1,4 @@
 "use client";
-import "./styles.css"
 import { helix } from 'ldrs';
 import { Navigation } from './navigation';
 import { MenuToggle } from './menu-toggle';
@@ -67,9 +66,13 @@ const Navbar: React.FC = () => {
                 animate={isOpen ? "open" : "closed"}
                 custom={height}
                 ref={containerRef}
-                className={`w-full ${zIndex}`}
+                className={`fixed top-0 left-0 bottom-0 w-full ${zIndex}`}
             >
-                <motion.div className="background absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-400 to-purple-400" variants={sidebar} />
+                <motion.div
+                    className="fixed top-0 right-0 bottom-0 w-full bg-white overflow-x-hidden
+               bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-400 to-purple-400"
+                    variants={sidebar}
+                />
                 <MenuToggle toggle={() => toggleOpen()} />
 
                 {isOpen && <Navigation toggle={() => toggleOpen()} />}

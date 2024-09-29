@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
                     variants={imageBoxVariants}
                     className="relative h-full w-full flex rounded-2xl md:col-span-1"
                 >
-                    <ImageBox className="relative h-full w-full flex rounded-2xl md:col-span-1" /> {/* This will now work correctly */}
+                    <ImageBox className="relative h-full w-full flex rounded-2xl" />
                 </motion.div>
                 <motion.div
                     variants={introBoxVariants}

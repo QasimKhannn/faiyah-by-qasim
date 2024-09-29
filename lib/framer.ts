@@ -4,21 +4,21 @@ export const zoomOutVariants = {
 };
 
 export const introBoxVariants = {
-    hidden: { x: -100, opacity: 0 }, // Start off-screen to the left
+    hidden: { x: -100, opacity: 0 },
     visible: { x: 0, opacity: 1, transition: { duration: 1.2, ease: "easeInOut" } },
 };
 
 export const imageBoxVariants = {
-    hidden: { y: -100, opacity: 0 }, // Start off-screen at the top
+    hidden: { y: -100, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 1.2, ease: "easeInOut" } },
 };
 
 export const sideMenuVariants = {
-    hidden: { x: 100, opacity: 0 }, // Start off-screen to the right
+    hidden: { x: 100, opacity: 0 },
     visible: { x: 0, opacity: 1, transition: { duration: 1.2, ease: "easeInOut" } },
 };
 
 export const socialsBoxVariants = {
-    hidden: { y: 100, opacity: 0 }, // Start off-screen from below
+    hidden: { y: 100, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 1.2, ease: "easeInOut" } },
 };

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { ShootingStars } from "../aceternity/shooting-starts";
 import { StarsBackground } from "../aceternity/stars-background";
 

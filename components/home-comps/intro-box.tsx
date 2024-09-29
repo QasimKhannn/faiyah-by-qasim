@@ -31,7 +31,7 @@ const IntroBox: React.FC<props> = ({ className }: props) => {
         <div className={className}>
             <div className='absolute inset-0 rounded-2xl' />
             <div className='flex justify-center gap-8 flex-col md:items-start items-center h-full md:col-span-2 col-span-3 md:order-1 order-2'>
-                <h1 className='text-[1.4rem] md:text-5xl text-white font-bold text-center'>
+                <h1 className='md:text-7xl text-white font-bold text-center'>
                     Full Stack Engineer
                 </h1>
             </div>
