@@ -1,7 +1,8 @@
 "use client"
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Github, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+import { IconBrandWhatsapp } from '@tabler/icons-react';
 
 interface Props {
     className?: string;
@@ -9,8 +10,8 @@ interface Props {
 
 const items = [
     { title: "LinkedIn", icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/qasim-k-23b7081b9/' },
-    { title: "Github", icon: <Github size={20} />, href: 'https://github.com/qasim-k' },
-    { title: "Gmail", icon: <Mail size={20} />, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=iamqasimk@gmail.com' },
+    { title: "Github", icon: <Github size={20} />, href: 'https://github.com/QasimKhannn' },
+    { title: "Whatsapp", icon: <IconBrandWhatsapp size={20} />, href: 'https://wa.me/923494471667' },
 ];
 
 const SocialsBox: React.FC<Props> = ({ className }) => {

@@ -1,12 +1,20 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import { Eye, Github } from 'lucide-react';
 import theImage from "../../public/logo-spiral.png";
+import { motion } from 'framer-motion';
 import CardSpotlight from '@/components/aceternity/card-spotlight';
+import { zoomOutVariants } from '@/lib/framer';
 
 const ProjectsPage: React.FC = () => {
     return (
-        <div className="md:h-[33rem] h-full w-full grid grid-cols-1 lg:grid-cols-4 gap-6 px-10 md:mt-0 mb-10 md:mb-0 py-3 bg-transparent">
+        <motion.div
+            className="md:h-[33rem] h-full w-full mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 px-5 md:mt-0 mb-10 md:mb-0 py-3 bg-transparent"
+            variants={zoomOutVariants}
+            initial="hidden"
+            animate="visible"
+        >
             {[1, 2, 3, 4].map((_, index) => (
                 <CardSpotlight key={index} className='p-4 max-h-96'>
                     <div className='bg-lime-50 rounded-md'>
@@ -29,7 +37,7 @@ const ProjectsPage: React.FC = () => {
                     </div>
                 </CardSpotlight>
             ))}
-        </div>
+        </motion.div>
     );
 }
 

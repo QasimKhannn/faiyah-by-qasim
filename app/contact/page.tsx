@@ -1,57 +1,96 @@
 "use client"
+import { Input, TextArea } from '@/components/aceternity/form/input'
+import { Label } from '@/components/aceternity/form/label'
+import { motion } from 'framer-motion'
+import { cn } from '@/lib/utils'
 import React from 'react'
+import Image from 'next/image'
+import { zoomOutVariants } from '@/lib/framer'
 
 const ContactUs: React.FC = () => {
+    const handleSubmit = () => {
+        console.log("HEHEHE")
+    }
+
     return (
-        <div className="md:h-[33rem] h-full w-full flex flex-col justify-center items-center">
-            <div className='flex flex-col items-center'>
-                <div className="w-full flex justify-center items-center mt-5">
-                    <span className="font-bold text-[#fff] text-5xl">
-                        Get in
-                    </span>
-                    <span className="font-bold text-5xl text-[rgba(255,255,255,0.3)]">
-                        touch
-                    </span>
-                </div>
-                <span className="text-[#fff] text-sm font-bold">
+        <motion.div
+            className="md:h-[33rem] h-full w-full mx-auto grid grid-cols-2 gap-4 px-5 md:mt-0 mb-10 md:mb-0 py-3 bg-transparent"
+            variants={zoomOutVariants}
+            initial="hidden"
+            animate="visible"
+        >
+            <div className="md:h-[31rem] w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black md:col-span-1 col-span-2">
+                <h2 className="font-bold text-2xl text-neutral-200">
+                    Get In Touch
+                </h2>
+                <p className="text-xs max-w-sm mt-2 font-bold text-neutral-300">
                     Reach out, and let's create a universe of possibilities together!
-                </span>
-            </div>
-            <div className='w-[95%] h-[90%] flex justify-center items-center'>
-                <div className='flex w-[95%] h-[90%] flex-row items-center bg-[rgba(255,255,255,0.04)] rounded-[20px] border-solid border-2 border-[rgba(9,12,23,0.05)]'>
-                    <div className='w-[50%]'>
-                        <div className=''>
-                            <span className="flex justify-start items-start text-[#fff]">
-                                Let’s connect constellations
-                            </span>
-                            <span className="flex justify-start items-start text-[#fff]">
-                                Let's align our constellations! Reach out and let the magic of
-                                collaboration illuminate our skies.
-                            </span>
-                        </div>
-                        <div className='flex flex-col items-start'>
-                            <input className='w-full h-12 rounded-md text-white bg-[rgba(255,255,255,0.05)] border-solid border border-[rgba(255,255,255,0.2)]' placeholder='Email' />
-                            <textarea className='w-full h-28 rounded-md text-white bg-[rgba(255,255,255,0.05)] border-solid border border-[rgba(255,255,255,0.2)]' placeholder='Message' />
-                            <button className='text-white'>
-                                Send it to the moon
-                            </button>
-                        </div>
+                </p>
+
+                <form className="my-8" onSubmit={handleSubmit}>
+                    <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+                        <LabelInputContainer>
+                            <Label htmlFor="firstname">First name</Label>
+                            <Input id="firstname" placeholder="Qasim" type="text" />
+                        </LabelInputContainer>
+                        <LabelInputContainer>
+                            <Label htmlFor="lastname">Last name</Label>
+                            <Input id="lastname" placeholder="Khan" type="text" />
+                        </LabelInputContainer>
                     </div>
-                    <div className='flex w-[50%] justify-center items-center'>
-                        <div className='flex flex-col gap-[6px] items-start'>
-                            <span className="flex justify-start items-start text-[#fff]">
-                                “Two lunar months revealed Earth's fragile beauty against vast
-                                silence, transforming my view of our place in the universe.
-                            </span>
-                            <span className="text-[#fff]">
-                                Irinel Traista
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                    <LabelInputContainer className="mb-4">
+                        <Label htmlFor="email">Email Address</Label>
+                        <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+                    </LabelInputContainer>
+                    <LabelInputContainer className="mb-4">
+                        <Label htmlFor="message">Message</Label>
+                        <TextArea id="password" placeholder="Your Message" />
+                    </LabelInputContainer>
+
+                    <button
+                        className="bg-gradient-to-br font-bold relative group/btn from-zinc-900 to-zinc-900 block bg-zinc-800 w-full text-white rounded-md h-10 shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]"
+                        type="submit"
+                    >
+                        Send it to the Space &rarr;
+                        <BottomGradient />
+                    </button>
+                </form>
             </div>
-        </div>
+            <div className="relative w-full md:h-[31rem] mx-auto rounded-none md:rounded-2xl shadow-input bg-black md:col-span-1 col-span-2 overflow-hidden">
+                <Image
+                    src="https://img.freepik.com/free-photo/view-astronaut-spacesuit-snowboarding-moon_23-2151294776.jpg?t=st=1727597361~exp=1727600961~hmac=887fc045d0e0f073c434e9ea909ed8613e90a9d9f24a119e3a952a99e1e33cec&w=1060"
+                    alt="qasim-khan"
+                    fill
+                    className="object-cover w-full h-full rounded-2xl"
+                    priority={true}
+                />
+            </div>
+
+        </motion.div>
     )
 }
 
 export default ContactUs
+
+const BottomGradient = () => {
+    return (
+        <>
+            <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
+            <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
+        </>
+    );
+};
+
+const LabelInputContainer = ({
+    children,
+    className,
+}: {
+    children: React.ReactNode;
+    className?: string;
+}) => {
+    return (
+        <div className={cn("flex flex-col space-y-2 w-full", className)}>
+            {children}
+        </div>
+    );
+};

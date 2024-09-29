@@ -29,10 +29,10 @@ const IntroBox: React.FC<props> = ({ className }: props) => {
 
     return (
         <div className={className}>
-            <div className='absolute inset-0 bg-white opacity-15 rounded-2xl' />
-            <div className='flex justify-center gap-8 flex-col items-start h-full md:col-span-2 col-span-3 md:order-1 order-2'>
-                <h1 className='text-3xl md:text-5xl lg:text-5xl text-white font-bold text-left'>
-                    Developing the Future with Full Stack Innovation
+            <div className='absolute inset-0 rounded-2xl' />
+            <div className='flex justify-center gap-8 flex-col md:items-start items-center h-full md:col-span-2 col-span-3 md:order-1 order-2'>
+                <h1 className='text-[1.4rem] md:text-5xl text-white font-bold text-center'>
+                    Full Stack Engineer
                 </h1>
             </div>
             <div className='flex md:justify-end justify-center items-center relative md:my-0 md:col-span-1 col-span-3 md:order-2 order-1'>
