@@ -24,6 +24,9 @@ interface Props {
 const RootLayout: React.FC<Props> = ({ children }: Readonly<Props>) => {
     return (
         <html lang="en">
+            <head>
+                <link rel="icon" href="./favicon.ico" sizes="any" />
+            </head>
             <body className={`${poppins.className} bg-black font-normal`}>
                 <Navbar />
                 <BackgroundBeamsWithCollision>
