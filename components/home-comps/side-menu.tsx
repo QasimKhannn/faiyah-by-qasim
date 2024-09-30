@@ -36,7 +36,7 @@ const SideMenu: React.FC<props> = ({ className }: props) => {
                     }}
                     className="z-50 flex flex-col justify-center items-center"
                 >
-                    <motion.p className="font-bold text-xl md:text-1xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+                    <motion.p className="font-bold text-xl md:text-4xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
                         May the code <br /> be with you
                     </motion.p>
                 </motion.div>
