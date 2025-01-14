@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { zoomOutVariants } from '@/lib/framer';
-import { LabelInputContainer } from '@/app/contact/page';
 import Input from '@/components/aceternity/form/input';
 import { Check, Plus, Trash } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import LabelInputContainer from '@/components/label-inp-cont';
 
 interface Task {
     id: number;

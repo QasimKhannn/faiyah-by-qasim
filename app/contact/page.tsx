@@ -5,7 +5,9 @@ import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { zoomOutVariants } from "@/lib/framer";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import LabelInputContainer from "@/components/label-inp-cont";
+import BottomGradient from "@/components/bottom-grad";
 
 const Input = dynamic(() => import("@/components/aceternity/form/input"), { ssr: false });
 const TextArea = dynamic(() => import("@/components/aceternity/form/text-area"), { ssr: false });
@@ -93,11 +95,10 @@ const ContactUs: React.FC = () => {
                         <BottomGradient />
                     </button>
                 </form>
-
             </div>
             <div className="relative w-full md:h-[31rem] object-cover mx-auto rounded-none md:rounded-2xl shadow-input bg-black md:col-span-1 col-span-2 overflow-hidden">
                 <Image
-                    src="https://img.freepik.com/free-photo/view-astronaut-spacesuit-snowboarding-moon_23-2151294776.jpg?t=st=1727597361~exp=1727600961~hmac=887fc045d0e0f073c434e9ea909ed8613e90a9d9f24a119e3a952a99e1e33cec&w=1060"
+                    src="https://img.freepik.com/free-photo/view-astronaut-spacesuit-snowboarding-moon_23-2151294776.jpg"
                     alt="qasim-khan"
                     fill
                     className="object-cover rounded-2xl"
@@ -110,16 +111,3 @@ const ContactUs: React.FC = () => {
 };
 
 export default ContactUs;
-
-export const BottomGradient = () => {
-    return (
-        <>
-            <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
-            <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
-        </>
-    );
-};
-
-export const LabelInputContainer = ({ children, className }: { children: React.ReactNode; className?: string; }) => {
-    return <div className={cn("flex flex-col space-y-2 w-full", className)}>{children}</div>;
-};
