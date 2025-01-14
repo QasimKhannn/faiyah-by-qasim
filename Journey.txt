@@ -1,0 +1,35 @@
+Portfolio
+-Adjust Projects Screen(Categorise)
+-fix showcase image
+
+
+
+- ATS CV
+- Projects
+    - BEGGINER
+        -Portfolio (Done...)
+        -To Do list (In Progress)__(handle storage-optional)
+        -Weather App
+        -Basic Calculator
+        -Quote Generator
+        -Blog
+        -Photo Gallery
+        -Memory Game
+        -BMI Calculator
+        -Countdown timer
+    - Intermediate
+        -Chat App
+        -E Commerce Website
+        -Recipe App
+        -Music Player
+        -Expense Tracker
+        -Blog CMS
+        -Weather Dash
+        -Note Taking
+        -Portfolio with CMS
+        -Tic Tac Toe
+    - Advanced
+        -Social Media Dash
+        -Real Estate
+        ...
+- Referals (LinkedIn)

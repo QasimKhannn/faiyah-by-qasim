@@ -111,7 +111,7 @@ const ContactUs: React.FC = () => {
 
 export default ContactUs;
 
-const BottomGradient = () => {
+export const BottomGradient = () => {
     return (
         <>
             <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
@@ -120,6 +120,6 @@ const BottomGradient = () => {
     );
 };
 
-const LabelInputContainer = ({ children, className }: { children: React.ReactNode; className?: string; }) => {
+export const LabelInputContainer = ({ children, className }: { children: React.ReactNode; className?: string; }) => {
     return <div className={cn("flex flex-col space-y-2 w-full", className)}>{children}</div>;
 };

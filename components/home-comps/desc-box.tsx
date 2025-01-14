@@ -14,7 +14,7 @@ const DescBox: React.FC<props> = ({ className }: props) => {
             <div className='absolute inset-0 bg-white opacity-15 rounded-2xl' />
             <div className='flex md:justify-start justify-center items-end relative gap-3'>
                 <l-jelly-triangle
-                    size="30"
+                    size="25"
                     speed="1.75"
                     color="#a65aff"
                 ></l-jelly-triangle>

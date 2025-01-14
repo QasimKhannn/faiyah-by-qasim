@@ -1,11 +1,13 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import theImage from "../../public/logo-spiral.png";
 import { motion } from 'framer-motion';
 import { zoomOutVariants } from '@/lib/framer';
+import data from '../../data/projects.json'
+import { useRouter } from 'next/navigation';
 
 const ProjectsPage: React.FC = () => {
+    const router = useRouter()
     return (
         <motion.div
             className="md:h-[33rem] h-full w-full mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 px-5 md:mt-0 mb-10 md:mb-0 py-3 bg-transparent"
@@ -13,29 +15,22 @@ const ProjectsPage: React.FC = () => {
             initial="hidden"
             animate="visible"
         >
-            {[1, 2, 3, 4].map((_, index) => (
-                <div key={index} className='p-10 rounded-md relative border border-neutral-800 bg-stone-900 dark:border-neutral-800'>
-                    <div className="bg-lime-50 rounded-md">
+            {data.map((item, index) => (
+                <div key={index} className='rounded-md h-80 cursor-pointer relative border border-neutral-800 bg-stone-900 dark:border-neutral-800 flex flex-col' onClick={() => window.open(`${item.route}`, "_blank")}>
+                    <div className="bg-lime-50 rounded-t-md">
                         <Image
-                            src={theImage}
+                            src={item.image}
                             alt={`project-image-${index}`}
                             width={320}
                             height={192}
-                            className="object-cover rounded-md"
+                            className="object-cover rounded-t-md"
                             loading="lazy"
                         />
                     </div>
-                    <p className='text-lg text-white font-bold mt-2'>Framer Portfolio</p>
-                    <p className='text-white text-xs'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, quis veniam aliquam, sed id fugiat ipsa odio</p>
-                    {/* <p className='text-white my-3'>Tools</p>
-                    <div className='flex items-end justify-end gap-3 flex-row'>
-                    <div className='p-1 rounded-2xl bg-purple-500 flex justify-center items-center'>
-                    <Eye size={20} color='white' />
+                    <div className='flex-1 h-full flex flex-col justify-center items-center p-4'>
+                        <p className='text-lg text-white font-bold mb-2'>{item.title}</p>
+                        <p className='text-white text-xs'>{item.description}</p>
                     </div>
-                    <div className='p-1 rounded-2xl bg-white flex justify-center items-center'>
-                    <Github size={20} color='black' />
-                    </div>
-                    </div> */}
                 </div>
             ))}
         </motion.div>

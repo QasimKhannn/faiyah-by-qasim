@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Next Js Framer Portfolio.",
+        "description": "A visually appealing portfolio built with Next.js and Framer Motion, showcasing my skills and projects in a dynamic and interactive manner.",
+        "image": "/showcase.png",
+        "route": "/"
+    },
+    {
+        "title": "HIPAA-Compliant Medical Translator",
+        "description": "A secure and real-time medical translation application leveraging OpenAI's API, designed to ensure HIPAA compliance for translating sensitive medical information accurately and efficiently.",
+        "image": "/projects/gig3.png",
+        "route": "https://enterprise.harmonitranslate.com/"
+    },
+    {
+        "title": "Simple To Do list.",
+        "description": "An intuitive to-do list application that allows users to easily add, complete, and manage tasks, helping to boost productivity and organization.",
+        "image": "/projects/to-do.png",
+        "route": "/projects/to-do"
+    }
+]
