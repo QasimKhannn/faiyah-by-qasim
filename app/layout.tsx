@@ -27,7 +27,7 @@ const RootLayout: React.FC<Props> = ({ children }: Readonly<Props>) => {
             <head>
                 <link rel="icon" href="./favicon.ico" sizes="any" />
             </head>
-            <body className={`${poppins.className} bg-black font-normal`}>
+            <body className={`${poppins.className} bg-black font-normal h-screen`}>
                 <Navbar />
                 <BackgroundBeamsWithCollision>
                     {children}

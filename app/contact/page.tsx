@@ -55,12 +55,12 @@ const ContactUs: React.FC = () => {
 
     return (
         <motion.div
-            className="md:h-[33rem] h-full w-full mx-auto grid grid-cols-2 gap-4 px-5 md:mt-0 mb-10 md:mb-0 py-3 bg-transparent"
+            className="md:h-screen h-full w-full mx-auto grid grid-cols-2 gap-4 px-5 md:mt-0 mb-10 md:mb-0 py-3 bg-transparent"
             variants={zoomOutVariants}
             initial="hidden"
             animate="visible"
         >
-            <div className="md:h-[31rem] w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black md:col-span-1 col-span-2">
+            <div className="md:h-screen flex flex-col justify-center items-center w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black md:col-span-1 col-span-2">
                 <h2 className="font-bold text-2xl text-neutral-200">Get In Touch</h2>
                 <p className="text-xs max-w-sm mt-2 font-bold text-neutral-300">
                     Reach out, and let's create a universe of possibilities together!
@@ -96,12 +96,13 @@ const ContactUs: React.FC = () => {
                     </button>
                 </form>
             </div>
-            <div className="relative w-full md:h-[31rem] object-cover mx-auto rounded-none md:rounded-2xl shadow-input bg-black md:col-span-1 col-span-2 overflow-hidden">
+            <div className="relative w-full md:h-full object-cover mx-auto rounded-none md:rounded-2xl shadow-input bg-black md:col-span-1 col-span-2 overflow-hidden">
                 <Image
                     src="https://img.freepik.com/free-photo/view-astronaut-spacesuit-snowboarding-moon_23-2151294776.jpg"
                     alt="qasim-khan"
                     fill
                     className="object-cover rounded-2xl"
+                    unoptimized
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />

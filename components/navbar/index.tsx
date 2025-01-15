@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
                 className={`fixed top-0 left-0 bottom-0 w-full ${zIndex}`}
             >
                 <motion.div
-                    className="fixed top-0 right-0 bottom-0 w-full bg-white overflow-x-hidden
+                    className="fixed top-0 right-[20px] bottom-0 w-full bg-white overflow-x-hidden
                bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-400 to-purple-400"
                     variants={sidebar}
                 />

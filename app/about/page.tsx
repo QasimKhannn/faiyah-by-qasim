@@ -15,7 +15,7 @@ const Cover = dynamic(() => import("@/components/aceternity/cover/cover"), { ssr
 const HomePage: React.FC = () => {
     return (
         <motion.div
-            className="md:h-[33rem] h-full w-full mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 px-5 md:mt-0 mb-10 md:mb-0 py-3 bg-transparent"
+            className="md:h-screen h-full w-full mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 px-5 md:mt-0 mb-10 md:mb-0 py-3 bg-transparent"
             variants={zoomOutVariants}
             initial="hidden"
             animate="visible"
